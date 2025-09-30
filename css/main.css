@@ -626,7 +626,7 @@ h1 {
 div.img {
   width: 100%;
   height: 240px;
-  background-image: url("./../../img/hero.jpg");
+  background-image: url("./../img/hero.jpg");
   background-position: center; /* centra en X y Y */
   background-size: cover; /* escala y recorta proporcionalmente */
   background-repeat: no-repeat;
@@ -755,7 +755,7 @@ div.gallery-2,
 div.gallery-3 {
   width: 343px;
   height: 320px;
-  background-image: url("./../../img/gallery-1.jpg");
+  background-image: url("./../img/gallery-1.jpg");
   background-position: center; /* centra en X y Y */
   background-size: cover; /* escala y recorta proporcionalmente */
   background-repeat: no-repeat;
@@ -798,7 +798,7 @@ div.gallery-3.gallery-2 {
 div.gallery-1.gallery-3,
 div.gallery-2.gallery-3,
 div.gallery-3.gallery-3 {
-  background-image: url("./../../img/gallery-3.jpg");
+  background-image: url("./../img/gallery-3.jpg");
 }
 @media (min-width: 376px) and (max-width: 1439px) {
   div.gallery-1.gallery-3,
@@ -820,7 +820,7 @@ div.gallery-1.gallery-1,
 div.gallery-2.gallery-1,
 div.gallery-3.gallery-1 {
   height: 350px;
-  background-image: url("./../../img/gallery-1.jpg");
+  background-image: url("./../img/gallery-1.jpg");
 }
 @media (min-width: 1440px) {
   div.gallery-1.gallery-1,
@@ -833,7 +833,7 @@ div.gallery-1.gallery-2,
 div.gallery-2.gallery-2,
 div.gallery-3.gallery-2 {
   height: 480px;
-  background-image: url("./../../img/gallery-2.jpg");
+  background-image: url("./../img/gallery-2.jpg");
 }
 @media (min-width: 1440px) {
   div.gallery-1.gallery-2,
@@ -847,7 +847,7 @@ div.gallery-1.gallery-3,
 div.gallery-2.gallery-3,
 div.gallery-3.gallery-3 {
   height: 220px;
-  background-image: url("./../../img/gallery-3.jpg");
+  background-image: url("./../img/gallery-3.jpg");
 }
 @media (min-width: 1440px) {
   div.gallery-1.gallery-3,
@@ -1008,16 +1008,16 @@ div.arrow-button {
   background-position: center;
 }
 div.arrow-button.right {
-  background-image: url(./../../img/arrow-right.svg);
+  background-image: url(./../img/arrow-right.svg);
 }
 div.arrow-button.left {
-  background-image: url(./../../img/arrow-left.svg);
+  background-image: url(./../img/arrow-left.svg);
 }
 
 div.location {
   width: 375px;
   height: 550px;
-  background-image: url(../../img/location.jpg);
+  background-image: url(./../img/location.jpg);
   background-position: center;
 }
 @media (min-width: 376px) and (max-width: 1439px) {

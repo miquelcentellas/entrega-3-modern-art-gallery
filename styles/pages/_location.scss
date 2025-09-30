@@ -7,7 +7,7 @@
 div.location {
   width: 375px;
   height: 550px;
-  background-image: url(../../img/location.jpg);
+  background-image: url(./../img/location.jpg);
   background-position: center;
   @include tablet {
     width: 100%;
