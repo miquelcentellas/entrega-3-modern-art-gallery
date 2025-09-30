@@ -1,0 +1,78 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+button {
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+  background-color: $black;
+  color: $white;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border: none;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+div.button {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 80px;
+
+  @include tablet {
+    margin-bottom: 0px;
+  }
+  @include desktop {
+    margin-top: 0px;
+  }
+  &:hover {
+    div.arrow-button {
+      background-color: $black;
+    }
+    button {
+      background-color: $orange;
+    }
+  }
+}
+
+div.button-location {
+  @include tablet {
+    margin-left: 40px;
+  }
+  @include desktop {
+    margin-left: 165px;
+  }
+
+  &:hover {
+    div.arrow-button {
+      background-color: $black;
+    }
+    button {
+      background-color: $orange;
+    }
+  }
+}
+
+div.arrow-button {
+  width: 56px;
+  height: 72px;
+  background-color: $orange;
+  background-repeat: no-repeat;
+  background-position: center;
+  &.right {
+    background-image: url(../../img/arrow-right.svg);
+  }
+  &.left {
+    background-image: url(../../img/arrow-left.svg);
+  }
+}

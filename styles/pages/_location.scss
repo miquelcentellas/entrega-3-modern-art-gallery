@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+div.location {
+  width: 375px;
+  height: 550px;
+  background-image: url(../../img/location.jpg);
+  background-position: center;
+  @include tablet {
+    width: 100%;
+  }
+  @include desktop {
+    width: 100%;
+  }
+}
+
+section.situation {
+  background-color: $black;
+  color: $white;
+  padding: 16px;
+  h2 {
+    color: $white;
+    margin-bottom: 40px;
+    @include desktop {
+      font-size: 70px;
+      line-height: 70px;
+    }
+  }
+  h3 {
+    color: $orange;
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    @include desktop {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+  @include tablet {
+    padding: 40px;
+    display: flex;
+  }
+  @include desktop {
+    padding: 100px 165px;
+    display: flex;
+  }
+}
+
+div.location-content-1 {
+  @include tablet {
+    max-width: 200px;
+  }
+  @include desktop {
+    max-width: 200px;
+  }
+}
+
+div.location-content-2 {
+  @include tablet {
+    padding-top: 40px;
+    padding-left: 100px;
+  }
+  @include desktop {
+    max-width: 100%;
+    padding-top: 20px;
+    padding-left: 350px;
+  }
+}

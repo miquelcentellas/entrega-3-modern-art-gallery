@@ -1,0 +1,128 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+div.container-desktop {
+  @include desktop {
+    display: flex;
+  }
+}
+div.bg-black {
+  display: none;
+
+  @include desktop {
+    display: inline-flex;
+    position: absolute;
+    background-color: $black;
+    width: 33%;
+    height: 800px;
+  }
+}
+
+div.hero {
+  padding: 16px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin-left: auto;
+    font-size: 16px;
+    padding: 0px;
+    padding-top: 120px;
+    padding-right: 30px;
+    margin-bottom: 250px;
+  }
+  @include desktop {
+    position: relative;
+    top: 60px;
+    padding: 165px;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin-left: auto;
+    font-size: 16px;
+    padding-left: 200px;
+    padding-top: 120px;
+    padding-right: 180px;
+    margin-bottom: 200px;
+  }
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 55px;
+  color: $black;
+  text-transform: uppercase;
+  font-family: "Big Shoulders";
+  font-weight: 900;
+
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  @include tablet {
+    font-size: 70px;
+    line-height: 65px;
+  }
+
+  @include desktop {
+    position: absolute;
+    left: -565px;
+    color: $white;
+    font-size: 100px;
+    line-height: 90px;
+  }
+}
+div.img {
+  width: 100%;
+  height: 240px;
+  background-image: url("../../img/hero.jpg");
+  background-position: center; /* centra en X y Y */
+  background-size: cover; /* escala y recorta proporcionalmente */
+  background-repeat: no-repeat;
+
+  @include tablet {
+    position: absolute;
+    max-width: 55%;
+    width: 437px;
+    height: 700px;
+    background-size: cover;
+    z-index: -1;
+  }
+  @include desktop {
+    position: absolute;
+    left: 450px;
+    max-width: 55%;
+    width: 540px;
+    height: 800px;
+    background-size: cover;
+    z-index: -1;
+  }
+}
+img {
+  overflow: hidden;
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+
+  font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 30px;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
+  @include desktop {
+    font-size: 22px;
+  }
+}
+
+div p {
+  @include tablet {
+    margin-bottom: 0px;
+  }
+}

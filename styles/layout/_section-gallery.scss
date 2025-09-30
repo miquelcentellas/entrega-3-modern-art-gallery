@@ -1,0 +1,204 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+section.gallery {
+  padding: 16px;
+
+  @include tablet {
+    display: flex;
+    padding: 40px;
+    margin-bottom: 100px;
+  }
+  @include desktop {
+    display: flex;
+    padding: 165px;
+  }
+}
+div.content-1 {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    margin-right: auto;
+    max-height: 400px;
+    gap: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    div.container-desktop {
+      max-width: 90%;
+    }
+  }
+  div.text {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    margin-right: auto;
+    max-height: 500px;
+    gap: 20px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    div.container-desktop {
+      max-width: 80%;
+    }
+  }
+}
+
+div.content-2 {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: 1fr 1.3fr;
+    min-height: 700px;
+    gap: 10px;
+  }
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: 1fr 1.3fr;
+    min-height: 700px;
+    gap: 35px;
+  }
+}
+
+div.gallery-1,
+div.gallery-2,
+div.gallery-3 {
+  width: 343px;
+  height: 320px;
+  background-image: url("../../img/gallery-1.jpg");
+  background-position: center; /* centra en X y Y */
+  background-size: cover; /* escala y recorta proporcionalmente */
+  background-repeat: no-repeat;
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  &.gallery-1 {
+    background-image: url("../../img/gallery-1.jpg");
+    @include tablet {
+      background-position: center;
+    }
+  }
+  &.gallery-2 {
+    background-image: url("../../img/gallery-2.jpg");
+    @include tablet {
+      min-height: 700px; /* escala y recorta proporcionalmente */
+      grid-row: 1 / span 2;
+    }
+  }
+  &.gallery-3 {
+    background-image: url("../../img/gallery-3.jpg");
+    @include tablet {
+      min-height: 300px; /* escala y recorta proporcionalmente */
+    }
+  }
+
+  @include desktop {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  &.gallery-1 {
+    height: 350px;
+    background-image: url("../../img/gallery-1.jpg");
+    @include desktop {
+      background-position: center;
+    }
+  }
+  &.gallery-2 {
+    height: 480px;
+    background-image: url("../../img/gallery-2.jpg");
+    @include desktop {
+      height: 100%; /* escala y recorta proporcionalmente */
+      grid-row: 1 / span 2;
+    }
+  }
+  &.gallery-3 {
+    height: 220px;
+    background-image: url("../../img/gallery-3.jpg");
+    @include desktop {
+      height: 100%;
+    }
+  }
+}
+
+h2,
+article.inspired h2 {
+  font-size: 50px;
+  color: $black;
+  text-transform: uppercase;
+  font-family: "Big Shoulders";
+  font-weight: 900;
+  line-height: 45px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  @include desktop {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+article.inspired {
+  background-color: $black;
+  padding: 20px;
+  h2,
+  p {
+    color: $white;
+    font-weight: 300;
+    @include desktop {
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
+
+  @include tablet {
+    padding: 30px;
+  }
+
+  @include desktop {
+    padding: 50px;
+  }
+}
+h3 {
+  color: $white;
+  font-family: "Big Shoulders";
+  text-transform: uppercase;
+  font-size: 50px;
+  line-height: 45px;
+  margin: 0px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  @include desktop {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+span.salto-tablet {
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+span.salto-desktop {
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+  }
+}
